@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500&display=swap" rel="stylesheet">
+
+    
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="css/rome.css">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    
+    <!-- Style -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Agendar cita</title>
+  </head>
+  <body>
+  
+
+  <div class="content">
+    <h2 style="text-align: center;">Agendar cita</h2>
+    <div class="container text-left">
+      <div class="row justify-content-center">
+        <div class="col-lg-3">
+            <form class="form-card" onsubmit="event.preventDefault()">
+              <div>
+                  <div  <label class="form-control-label px-3">Nombre de tu mascota<span class="text-danger"> *</span></label> <input type="text" id="fname" name="fname" placeholder="Ingresa el nombre" onblur="validate(1)"> </div>
+                  <div  <label class="form-control-label px-3">Motivo de la cita<span class="text-danger"> *</span></label> <input type="text" id="lname" name="lname" placeholder="Ingresa  el motivo de la cita" onblur="validate(2)"> </div>
+              </div>
+            <div class="col-md-12">
+              <div class="form-group">
+                <label for="input_from">Agenda que dia quieres tu cita</label>
+                <input type="text" class="form-control" id="input">
+              </div>
+            </div>
+            <div class="row justify-content-end">
+              <div class="form-group col-sm-6"> <button type="submit" class="btn-block btn-primary">Enviar</button> </div>
+          </div>
+          </form>
+          <label for="input_from">Te enviaremos un correo confirmando tu cita y hora</label>
+        </div>
+      </div>
+          
+    </div>
+  </div>
+    
+    
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/rome.js"></script>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
