@@ -20,8 +20,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     $iniciolabores = trim($_POST["iniciolabores"]);
 
         // Preparar la sentencia de insert
-        $sql = "INSERT INTO `empleados` (`ID_empleado`, `username`, `password`, `nombre`, `apellidos`, `permisos`, `telefono`, `puesto`, `nss`, `fechanacimiento`, `iniciolabores`)
-                 VALUES (NULL, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        $sql = "INSERT INTO `empleados` (`ID_empleado`, `username`, `password`, `nombre`, `apellidos`, `permisos`, `telefono`, `puesto`, `nss`, `fechanacimiento`, `iniciolabores`, `active`)
+                 VALUES (NULL, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 1)";
 
         if($stmt = mysqli_prepare($link, $sql)){
             // Unir (bind) variables para la sentencia preparada como parametros
@@ -42,7 +42,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             // Intenta registrar a la base de datos
             if(mysqli_stmt_execute($stmt)){
                 // Registro exitoso, redireccionando a la landing page
-                header("location: index.html");
+                header("location: tablaEmpleados.php");
                 exit();
             } else{
                 echo "Oops! Algo salió mal, intentalo de nuevo";
@@ -61,7 +61,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <html lang="en">
 <head>
  <meta charset="UTF-8">
-    <title>Create Record</title>
+    <title>Agregar nuevo empleado</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
         .wrapper{
